@@ -1,0 +1,14 @@
+services:
+  cccbib:
+    image: ghcr.io/vimaster/cccbib:latest
+    restart: unless-stopped
+    container_name: cccbib
+    ports:
+      - "8004:80"
+    healthcheck:
+      test: ["CMD", "wget", "-qO", "-", "http://localhost/"]
+      interval: 10s
+      timeout: 3s
+      start_period: 60s
+      start_interval: 5s
+      retries: 3
