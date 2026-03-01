@@ -5,8 +5,3 @@ services:
     container_name: cccbib
     ports:
       - "8004:80"
-    healthcheck:
-      test: ["CMD", "wget", "-qO", "-", "http://localhost/"]
-      interval: 10s
-      timeout: 3s
-      retries: 3
