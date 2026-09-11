@@ -1,6 +1,6 @@
 services:
   cccbib:
-    image: ghcr.io/vimaster/cccbib:latest
+    image: ghcr.io/vimaster/cccbib:latest@sha256:68c7b7dc63244f3adc5e1161e1a61626cc913b9b904fdd8755bb9e503f6a7514
     restart: unless-stopped
     container_name: cccbib
     ports:
